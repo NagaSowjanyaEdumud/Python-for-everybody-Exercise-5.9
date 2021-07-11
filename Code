@@ -17,3 +17,29 @@ while True:
       continue
 print('done')  
 print(total, num, 'Average: ', total/num)
+
+
+Exercise 2:
+ Write another program that prompts for a list of numbers as above and at the end prints out both the maximum and minimum of the numbers instead of the average.
+ 
+ num = 0
+count = 0
+large = None
+small = None
+while True:
+   line = input('Please enter a number of your choice: ')
+   try:
+      if line == 'done':
+         break
+      fline = float(line)
+      #print(fline)
+      num = num +1
+      count = count + fline
+      if large is None or fline > large:
+         large = fline
+      if small is None or fline < small:
+         small = fline
+   except:
+      print('Please enter a valid number')
+      continue
+print(num, count, large, small)
